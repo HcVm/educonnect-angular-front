@@ -1,0 +1,28 @@
+<div *ngIf="asesor" class="editar-paciente-container">
+    <h2>Editar Asesor</h2>
+    <form (ngSubmit)="actualizarAsesor()">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="asesor.nombre" name="nombre" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput [(ngModel)]="asesor.correo" name="correoElectronico" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Tarifa</mat-label>
+        <input matInput [(ngModel)]="asesor.tarifa" name="tarifa" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Disponibilidad</mat-label>
+        <input matInput [(ngModel)]="asesor.disponibilidad" name="disponibilidad" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Especializacion</mat-label>
+        <input matInput [(ngModel)]="asesor.especializacion" name="especializacion" required>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" type="submit">Actualizar Asesor</button>
+    </form>
+  </div>

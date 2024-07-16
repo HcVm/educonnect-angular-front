@@ -2,8 +2,10 @@ import { Usuario } from './usuario';
 
 export interface Asesor {
   id: number;
-  usuario: Usuario;
+  usuario_id: number;
   especializacion: string;
   disponibilidad: string;
-  tarifa: number;
+  tarifa: string;
+  nombre: string;
+  correo: string;
 }
