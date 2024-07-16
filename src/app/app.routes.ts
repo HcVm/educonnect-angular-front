@@ -8,6 +8,8 @@ import { AuthGuard } from './guards/auth.guard'; // Asegúrate de tener tu AuthG
 import { PrincipalPageComponent } from './components/principal-page/principal-page.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactanosComponent } from './components/contactanos/contactanos.component';
+import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
+import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' }, // Redirige a login por defecto
@@ -16,6 +18,8 @@ export const routes: Routes = [
   { path: 'registro', component: RegistroComponent },
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'contactanos', component: ContactanosComponent },
+  { path: 'editar-usuario', component: EditarUsuarioComponent },
+  { path: 'listar-usuario', component: ListarUsuariosComponent },
 
   
   // Rutas protegidas (requieren autenticación)
