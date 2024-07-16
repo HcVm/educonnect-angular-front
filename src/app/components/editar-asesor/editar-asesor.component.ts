@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { AsesorService } from '../../services/asesor.service';
+import { UsuarioService } from '../../services/usuario.service';
 import { Asesor } from '../../models/asesor';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -27,6 +28,7 @@ export class EditarAsesorComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private asesorService: AsesorService,
+    private usuarioService: UsuarioService,
     public authService: AuthService,
   ) {
     this.usuarioId = +this.route.snapshot.paramMap.get('id')!;
@@ -47,7 +49,7 @@ export class EditarAsesorComponent implements OnInit {
     if (this.asesor) {
       this.asesorService.actualizarAsesor(this.asesor).subscribe(
         () => {
-          this.router.navigate(['/']);
+          this.router.navigate(['/listar-asesores']);
         },
         (error) => {
           console.error('Error al actualizar el asesor:', error);

@@ -3,12 +3,12 @@
     <form (ngSubmit)="actualizarAsesor()">
       <mat-form-field appearance="fill">
         <mat-label>Nombre</mat-label>
-        <input matInput [(ngModel)]="asesor.nombre" name="nombre" required>
+        <input readonly  matInput [(ngModel)]="asesor.nombre" name="nombre" required>
       </mat-form-field>
       <br>
       <mat-form-field appearance="fill">
         <mat-label>Correo Electrónico</mat-label>
-        <input matInput [(ngModel)]="asesor.correo" name="correoElectronico" required>
+        <input  readonly  matInput [(ngModel)]="asesor.correo" name="correoElectronico" required>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Tarifa</mat-label>

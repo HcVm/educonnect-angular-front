@@ -1,8 +1,9 @@
 export interface Membresia {
-    id: number;
-    nombre: 'Basica' | 'Premium';
-    descripcion: string;
-    precio: number;
-    duracion_dias: number;
-  }
-  
+  id: number;
+  usuario_id: number;
+  nombre: 'Basica' | 'Premium';
+  descripcion: string;
+  precio: number;
+  fecha_inicio: Date;
+  fecha_fin: Date;
+}
