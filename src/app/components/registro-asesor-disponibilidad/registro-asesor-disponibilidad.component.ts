@@ -39,7 +39,6 @@ export class RegistroAsesorDisponibilidadComponent implements OnInit {
       usuarioId: [localStorage.getItem('id'), Validators.required],
       especializacion: ['', [Validators.required]],
       disponibilidad: ['', Validators.required],
-      tarifa: ['',Validators.required]
     });
   }
 

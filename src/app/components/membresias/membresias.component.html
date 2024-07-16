@@ -21,7 +21,7 @@
                       <li>Acceso limitado a material de la biblioteca</li>
                       <li>Comentarios y evaluaciones sobre asesorías</li>
                   </ul>
-                  <button class="plan-button">Suscribirse</button>
+                  <button (click)="onSubmit('Basica','Membresia Basica',100)" class="plan-button">Suscribirse</button>
               </div>
 
               <!-- Tarjeta Plan Premium -->
@@ -34,7 +34,7 @@
                       <li>Acceso a reportes de notas y comentarios del alumno</li>
                       <li>El número del sr. Vásquez</li>
                   </ul>
-                  <button class="plan-button">Suscribirse</button>
+                  <button  (click)="onSubmit('Premium','Membresia Premium',1000)" class="plan-button">Suscribirse</button>
               </div>
 
               <!-- Tarjeta Plan Super ArchiMegaPremium -->
@@ -50,7 +50,7 @@
                       <li>Acceso a la casa del sr. Vásquez</li>
                       <li>Acceso a party de 5 de divine a +</li>
                   </ul>
-                  <button class="plan-button">Suscribirse</button>
+                  <button (click)="onSubmit('UltraPremium','Membresia UltraPremium',2000)" class="plan-button">Suscribirse</button>
               </div>
           </div>
       </div>

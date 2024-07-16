@@ -10,7 +10,7 @@ import { environment } from '../enviroments/eviroment';
 })
 export class AuthService {
   private apiUrl = `${environment.apiUrl}/usuarios`;
-  private usuarioAutenticadoSubject = new BehaviorSubject<Usuario | null>(null);
+  public usuarioAutenticadoSubject = new BehaviorSubject<Usuario | null>(null);
   usuarioAutenticado$ = this.usuarioAutenticadoSubject.asObservable();
 
   constructor(private http: HttpClient) { }

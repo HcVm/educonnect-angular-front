@@ -47,9 +47,10 @@ export class RegistroComponent implements OnInit {
     if (this.registroForm.valid) {
       const nuevoUsuario = this.registroForm.value;
       this.usuarioService.crearUsuario(nuevoUsuario).subscribe({
-        next: (response) => {
+        next: (response: any) => {
           console.log('Registro exitoso:', response);
-          this.router.navigate(['/login']); // Redirige al login después del registro
+          localStorage.setItem('idUsuario', response.usuarioId)
+          this.router.navigate(['/membresias']);
         },
         error: (error) => {
           console.error('Error al registrar:', error);
