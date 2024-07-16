@@ -8,6 +8,7 @@ import { MembresiasComponent } from './components/membresias/membresias.componen
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './guards/auth.guard';
 import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
+import { EditarAsesorComponent } from './components/editar-asesor/editar-asesor.component';
 import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
 import { ListarAsesorComponent } from './components/listar-asesor/listar-asesor.component'
 
@@ -19,6 +20,7 @@ export const routes: Routes = [
   { path: 'registro-asesor-disponibilidad', component: RegistroAsesorDisponibilidadComponent },
   { path: 'listar-usuarios', component: ListarUsuariosComponent },
   { path: 'editar-usuario/:id', component: EditarUsuarioComponent },
+  { path: 'editar-asesor/:id', component: EditarAsesorComponent },
   { path: 'listar-asesores', component: ListarAsesorComponent },
 
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
