@@ -1,6 +1,6 @@
 <div *ngIf="usuario" class="editar-paciente-container">
     <h2>Editar Paciente</h2>
-    <form (ngSubmit)="actualizarPaciente()">
+    <form (ngSubmit)="actualizarUsuario()">
       <mat-form-field appearance="fill">
         <mat-label>Nombre</mat-label>
         <input matInput [(ngModel)]="usuario.nombre" name="nombre" required>

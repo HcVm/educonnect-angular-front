@@ -38,19 +38,19 @@ export class EditarUsuarioComponent implements OnInit {
         this.usuario = usuario;
       },
       (error) => {
-        console.error('Error al obtener el paciente:', error);
+        console.error('Error al obtener el usuario:', error);
       }
     );
   }
 
-  actualizarPaciente() {
+  actualizarUsuario() {
     if (this.usuario) {
       this.usuarioService.actualizarUsuario(this.usuario).subscribe(
         () => {
           this.router.navigate(['/']);
         },
         (error) => {
-          console.error('Error al actualizar el paciente:', error);
+          console.error('Error al actualizar el usuario:', error);
         }
       );
     }
