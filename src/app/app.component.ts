@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { LayoutComponent } from './layout/layout.component'; // Importa el componente layout
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [LayoutComponent], // Incluye el componente layout
+  template: `<app-layout></app-layout>`,
+  styles: []
 })
-export class AppComponent {
-  title = 'mi-plataforma-asesorias-front';
-}
+export class AppComponent { }
