@@ -11,6 +11,7 @@ import { ContactanosComponent } from './components/contactanos/contactanos.compo
 import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
 import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
 
+
 export const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' }, // Redirige a login por defecto
   { path: '', component: PrincipalPageComponent },  
@@ -20,11 +21,11 @@ export const routes: Routes = [
   { path: 'contactanos', component: ContactanosComponent },
   { path: 'editar-usuario', component: EditarUsuarioComponent },
   { path: 'listar-usuario', component: ListarUsuariosComponent },
-
+  { path: 'membresias', component: MembresiasComponent },
   
   // Rutas protegidas (requieren autenticación)
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'membresias', component: MembresiasComponent, canActivate: [AuthGuard] },
+
 
   // Ruta para página no encontrada (404)
   { path: '**', component: NotFoundComponent }
