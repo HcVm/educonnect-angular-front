@@ -13,13 +13,14 @@ main {
         color: white;
 
         .section-1-h1 {
-            font-size: 3rem;
-            background: linear-gradient(to right, #ffd700, #ff8c00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
             text-align: center;
-        }
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            font-size: 3.5rem;
+            color: #1a1a1a;
+            text-shadow: 10px 20px 40px rgba(191, 255, 251, 0.9);
+            font-weight: 900;
+            }
 
         .section-1-img {
             width: 100%;
@@ -31,7 +32,7 @@ main {
     .section-2 {
         text-align: center;
         padding: 50px 20px;
-        background: url('https://img.freepik.com/vector-gratis/fondo-conexion-red-degradado_23-2148902184.jpg?w=1060&t=st=1721140325~exp=1721140925~hmac=3945dca88845736e23b306338592fde7f89d1f491c859718e9223515541f4ef4') no-repeat center center fixed;
+        background: url('../../../../public/assets/5156047.jpg') no-repeat center center fixed;
         background-size: cover;
 
         h2 {

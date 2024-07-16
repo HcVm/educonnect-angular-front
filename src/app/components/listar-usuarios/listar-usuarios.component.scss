@@ -1,0 +1,79 @@
+.listar-usuarios-main {
+    background: url('../../../../public/assets/5156047.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+.listar-usuarios-container {
+    background: #c1e2e1;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem;
+    /* Center horizontally */
+}
+
+.listar-usuarios-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: #094d32;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+}
+
+.stylish-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stylish-table th,
+.stylish-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.stylish-table th {
+    background-color: #0073e6;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.1rem;
+}
+
+.stylish-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.stylish-table td {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.stylish-table tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+button.mat-icon-button {
+    margin: 0 5px;
+    transition: transform 0.2s;
+}
+
+button.mat-icon-button:hover {
+    transform: scale(1.1);
+}
+
+button.mat-icon-button[color="primary"] {
+    color: #0073e6;
+}
+
+button.mat-icon-button[color="warn"] {
+    color: #e60000;
+}

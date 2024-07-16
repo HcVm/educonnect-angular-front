@@ -1,5 +1,6 @@
-<div *ngIf="usuario" class="editar-paciente-container">
-    <h2>Editar Paciente</h2>
+<div class="editar-usu-main">
+  <div *ngIf="usuario" class="editar-usuario-container">
+    <h2>Editar Usuario</h2>
     <form (ngSubmit)="actualizarUsuario()">
       <mat-form-field appearance="fill">
         <mat-label>Nombre</mat-label>
@@ -11,6 +12,8 @@
         <input matInput [(ngModel)]="usuario.correo" name="correoElectronico" required>
       </mat-form-field>
       <br>
-      <button mat-raised-button color="primary" type="submit">Actualizar Paciente</button>
+      <button mat-raised-button color="primary" type="submit">Actualizar Usuario</button>
     </form>
   </div>
+</div>
+
