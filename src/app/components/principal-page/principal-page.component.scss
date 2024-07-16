@@ -1,0 +1,122 @@
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 100px; // To avoid header overlap
+    background: linear-gradient(to right, #3f5e5a, #19392b);
+    
+    .section-1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding: 50px 20px;
+        background: linear-gradient(to right, #3f5e5a, #19392b );
+        color: white;
+
+        .section-1-h1 {
+            font-size: 3rem;
+            background: linear-gradient(to right, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        .section-1-img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .section-2 {
+        text-align: center;
+        padding: 50px 20px;
+        background: url('https://img.freepik.com/vector-gratis/fondo-conexion-red-degradado_23-2148902184.jpg?w=1060&t=st=1721140325~exp=1721140925~hmac=3945dca88845736e23b306338592fde7f89d1f491c859718e9223515541f4ef4') no-repeat center center fixed;
+        background-size: cover;
+
+        h2 {
+            font-size: 2rem;
+            color: #f2eeee;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #f2eeee;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        .section-2-div2 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            .div2-p {
+                font-size: 2rem;
+                background: linear-gradient(to right, #cbe0dd, #aeeed2);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .section-3 {
+        text-align: center;
+        padding: 50px 20px;
+        background: linear-gradient(to right, #3f5e5a, #19392b);
+        color: white;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .section-3-p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        .section-3-div1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            .section-3-div1-div {
+                background-size: cover;
+                background-position: center;
+                border-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                text-align: center;
+
+                .section-3-h3 {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 20px;
+                }
+
+                .section-3-but {
+                    border: 2px solid white;
+                    color: white;
+                    background-color: transparent;
+                    border-radius: 12px;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.1);
+                        border-color: #ffd700;
+                    }
+                }
+            }
+        }
+    }
+}

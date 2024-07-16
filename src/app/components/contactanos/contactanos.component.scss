@@ -1,0 +1,121 @@
+.contact-main {
+    background: url('https://img.freepik.com/vector-gratis/fondo-conexion-red-degradado_23-2148902184.jpg?w=1060&t=st=1721143970~exp=1721144570~hmac=a4f50ae3c3ad4ff39e915dda7dc6e783c7a740a82f733d1e2f2f321f9059e0a0') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+.contact-container {
+    background: #c1e2e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem; /* Center horizontally */
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+.contact-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s;
+    resize: vertical;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #0073e6;
+    outline: none;
+}
+
+.submit-button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+.submit-button:hover {
+    background-color: #005bb5;
+}
+
+.contact-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.contact-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+@media(min-width: 768px) {
+    .contact-content {
+        flex-direction: row;
+    }
+    
+    .contact-form, .contact-image {
+        width: 48%;
+    }
+}
