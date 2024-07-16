@@ -31,10 +31,10 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-radio-group aria-label="Tipo de usuario" formControlName="tipo" class="radio-group">
-          <mat-radio-button value="estudiante">Estudiante</mat-radio-button>
-          <mat-radio-button value="asesor">Asesor</mat-radio-button>
-        </mat-radio-group>
+        <div class="button-group">
+          <button mat-raised-button color="primary" (click)="redirectTo('estudiante')">Estudiante</button>
+          <button mat-raised-button color="accent" (click)="redirectTo('asesor')">Asesor</button>
+        </div>
 
         <mat-error *ngIf="errorMensaje" class="error-message">{{ errorMensaje }}</mat-error>
       </mat-card-content>
@@ -47,4 +47,3 @@
     </form>
   </mat-card>
 </div>
-

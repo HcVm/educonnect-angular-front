@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
-import { MembresiaService } from '../../services/membresia.service';
-import { Membresia } from '../../models/membresia';
+import { PagoService } from '../../services/pago.service';
+import { Pago } from '../../models/pago';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
@@ -10,19 +10,19 @@ import { Router } from '@angular/router';
 import { Usuario } from '../../models/usuario';
 
 @Component({
-  selector: 'app-listar-membresias',
+  selector: 'app-listar-pagos',
   standalone: true,
   imports: [MatCardModule, MatTableModule, CommonModule, MatIconModule],
-  templateUrl: './listar-membresias.component.html',
-  styleUrls: ['./listar-membresias.component.scss'] 
+  templateUrl: './listar-pagos.component.html',
+  styleUrls: ['./listar-pagos.component.scss'] 
 })
-export class ListarMembresiasComponent implements OnInit {
-  membresias: Membresia[] = [];
-  displayedColumns: string[] = ['id','nombre', 'descripcion', 'precio', 'fecha_inicio','fecha_fin'];
+export class ListarPagosComponent implements OnInit {
+  pagos: Pago[] = [];
+  displayedColumns: string[] = ['id','usuario_id', 'membresia_id', 'monto', 'fecha_pago','metodo_pago'];
   usuarioAutenticado: Usuario | null = null;
 
   constructor(
-    private membresiaService: MembresiaService,
+    private pagoService: PagoService,
     public authService: AuthService,
     private router: Router
   ) { }
@@ -32,7 +32,7 @@ export class ListarMembresiasComponent implements OnInit {
       this.usuarioAutenticado = usuario;
     });
 
-    this.cargarMembresias();
+    this.cargarPagos();
   }
 
   formatDate(dateString: string): string {
@@ -43,13 +43,13 @@ export class ListarMembresiasComponent implements OnInit {
     return `${year}-${month}-${day}`;
   }
 
-  cargarMembresias() {
-    this.membresiaService.obtenerMembresias().subscribe({
+  cargarPagos() {
+    this.pagoService.obtenerPagos().subscribe({
       next: (data) => {
-        this.membresias = data;
+        this.pagos = data;
       },
       error: (error) => {
-        console.error('Error al cargar Membresias :', error);
+        console.error('Error al cargar pagos :', error);
       }
     });
   }

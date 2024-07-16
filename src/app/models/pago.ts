@@ -1,11 +1,11 @@
-import { Usuario } from './usuario';
-import { Membresia } from './membresia';
+// import { Usuario } from './usuario';
+// import { Membresia } from './membresia';
 
 export interface Pago {
-  id: number;
-  usuario: Usuario;
-  membresia: Membresia;
+  id?: number;
+  usuarioId: string | null;
+  membresiaId: string | null;
   monto: number;
-  fecha_pago: Date;
-  metodo_pago: string;
+  fechaPago: string;
+  metodoPago: string;
 }

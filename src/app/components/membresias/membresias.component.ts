@@ -4,6 +4,8 @@ import { Membresia } from '../../models/membresia';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { PagoService } from '../../services/pago.service';
+import { Pago } from '../../models/pago';
 
 @Component({
   selector: 'app-membresias',
@@ -18,7 +20,8 @@ export class MembresiasComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private membresiaService: MembresiaService
+    private membresiaService: MembresiaService,
+    private pagoService: PagoService
   ) { }
 
   ngOnInit(): void {
@@ -38,9 +41,27 @@ export class MembresiasComponent implements OnInit {
       fechaFin: `${fecha.getFullYear()}-${('0'+(fecha.getMonth()+2)).slice(-2)}-${fecha.getDate()}`,
     }
 
+
       this.membresiaService.crearMembresia(nuevaMembresia).subscribe({
-        next: (response) => {    
+        next: (response: any) => {    
           console.log('Registro Asesor Exitoso:', response);
+          const nuevoPago: Pago = {
+            usuarioId: nuevaMembresia.usuarioId,
+            membresiaId: response.membresiaId,
+            monto: nuevaMembresia.precio,
+            fechaPago: nuevaMembresia.fechaInicio,
+            metodoPago: 'Tarjeta'
+          };
+          console.log(nuevoPago);
+          this.pagoService.registrarPago(nuevoPago).subscribe({
+            next: (response: any) => {
+              console.log(response);
+            },
+
+            error: (error) =>{
+              console.log(error);
+            }
+          })
           this.router.navigate(['/login']); 
         },
         error: (error) => {

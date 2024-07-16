@@ -14,6 +14,8 @@ import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuar
 import { EditarAsesorComponent } from './components/editar-asesor/editar-asesor.component';
 import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
 import { ListarAsesorComponent } from './components/listar-asesor/listar-asesor.component'
+import { ListarMembresiasComponent } from './components/listar-membresias/listar-membresias.component'
+import { ListarPagosComponent } from './components/listar-pagos/listar-pagos.component'
 
 
 export const routes: Routes = [
@@ -27,6 +29,8 @@ export const routes: Routes = [
   { path: 'editar-usuario/:id', component: EditarUsuarioComponent },
   { path: 'editar-asesor/:id', component: EditarAsesorComponent },
   { path: 'listar-asesores', component: ListarAsesorComponent },
+  { path: 'listar-membresias', component: ListarMembresiasComponent },
+  { path: 'listar-pagos', component: ListarPagosComponent },
 
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'contactanos', component: ContactanosComponent },
