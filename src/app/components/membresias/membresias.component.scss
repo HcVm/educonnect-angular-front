@@ -1,0 +1,120 @@
+.section {
+    background: url('https://img.freepik.com/vector-gratis/fondo-conexion-red-degradado_23-2148902184.jpg?w=1060&t=st=1721143970~exp=1721144570~hmac=a4f50ae3c3ad4ff39e915dda7dc6e783c7a740a82f733d1e2f2f321f9059e0a0') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    min-height: 100vh;
+}
+
+.section-div{
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+.div-title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.div-title-h2{
+    font-size: 3rem;
+    color: #094d32;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.div-title-h2::after {
+    content: '';
+    width: 250px;
+    height: 4px;
+    background-color: #0073e6;
+    display: block;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+.div-title-p{
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #4b5563;
+}
+
+.div-body {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #c1e2e1;
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    flex: 1;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.plan-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.plan-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0073e6;
+    margin-bottom: 1rem;
+}
+
+.plan-features {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+.plan-features li {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.plan-button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.plan-button:hover {
+    background-color: #005bb5;
+}
+
+.highlighted {
+    border: 2px solid #0073e6;
+    transform: scale(1.05);
+}

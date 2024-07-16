@@ -1,51 +1,50 @@
-<mat-card>
-  <mat-card-title>Registro</mat-card-title>
-  
-  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
-    <mat-card-content>
-      <mat-form-field appearance="outline">
-        <mat-label>Nombre</mat-label>
-        <input matInput formControlName="nombre" required />
-        <mat-error *ngIf="registroForm.get('nombre')?.hasError('required')">
-          El nombre es requerido
-        </mat-error>
-      </mat-form-field>
+<div class="registro-container">
+  <mat-card class="registro-box">
+    <mat-card-title class="title">Registro</mat-card-title>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Correo Electrónico</mat-label>
-        <input matInput type="email" formControlName="correo" required />
-        <mat-error *ngIf="registroForm.get('correo')?.hasError('required')">
-          El correo electrónico es requerido
-        </mat-error>
-        <mat-error *ngIf="registroForm.get('correo')?.hasError('email')">
-          El correo electrónico no es válido
-        </mat-error>
-      </mat-form-field>
+    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="nombre" required />
+          <mat-error *ngIf="registroForm.get('nombre')?.hasError('required')">
+            El nombre es requerido
+          </mat-error>
+        </mat-form-field>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Contraseña</mat-label>
-        <input matInput type="password" formControlName="contraseña" required />
-        <mat-error *ngIf="registroForm.get('contraseña')?.hasError('required')">
-          La contraseña es requerida
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Correo Electrónico</mat-label>
+          <input matInput type="email" formControlName="correo" required />
+          <mat-error *ngIf="registroForm.get('correo')?.hasError('required')">
+            El correo electrónico es requerido
+          </mat-error>
+          <mat-error *ngIf="registroForm.get('correo')?.hasError('email')">
+            El correo electrónico no es válido
+          </mat-error>
+        </mat-form-field>
 
-      <mat-radio-group 
-        aria-label="Tipo de usuario" 
-        formControlName="tipo"
-        class="radio-group"
-      >
-        <mat-radio-button value="estudiante">Estudiante</mat-radio-button>
-        <mat-radio-button value="asesor">Asesor</mat-radio-button>
-      </mat-radio-group>
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" formControlName="contraseña" required />
+          <mat-error *ngIf="registroForm.get('contraseña')?.hasError('required')">
+            La contraseña es requerida
+          </mat-error>
+        </mat-form-field>
 
-      <mat-error *ngIf="errorMensaje" class="error-message">{{ errorMensaje }}</mat-error>
-    </mat-card-content>
+        <mat-radio-group aria-label="Tipo de usuario" formControlName="tipo" class="radio-group">
+          <mat-radio-button value="estudiante">Estudiante</mat-radio-button>
+          <mat-radio-button value="asesor">Asesor</mat-radio-button>
+        </mat-radio-group>
 
-    <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit" [disabled]="!registroForm.valid">
-        Registrarse
-      </button>
-    </mat-card-actions>
-  </form>
-</mat-card>
+        <mat-error *ngIf="errorMensaje" class="error-message">{{ errorMensaje }}</mat-error>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!registroForm.valid">
+          Registrarse
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
+

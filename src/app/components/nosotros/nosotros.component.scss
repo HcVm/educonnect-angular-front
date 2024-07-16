@@ -1,0 +1,84 @@
+.nosotros {
+    background: url('https://img.freepik.com/vector-gratis/fondo-conexion-red-degradado_23-2148902184.jpg?w=1060&t=st=1721143970~exp=1721144570~hmac=a4f50ae3c3ad4ff39e915dda7dc6e783c7a740a82f733d1e2f2f321f9059e0a0') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    padding: 100px 0; /* Ajusta el padding según necesites */
+    text-align: center;
+}
+
+.nosotros-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nosotros-container {
+    padding: 2rem;
+}
+
+.nosotros-title {
+    font-size: 3rem;
+    background: linear-gradient(to right, #ffd700, #ff8c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.nosotros-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.nosotros-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.nosotros-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nosotros-card-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.nosotros-card-body {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .nosotros {
+        padding: 50px 0;
+    }
+
+    .nosotros-section {
+        padding: 0 10px;
+    }
+
+    .nosotros-title {
+        font-size: 2rem;
+    }
+
+    .nosotros-description {
+        font-size: 1rem;
+    }
+
+    .nosotros-card-header {
+        font-size: 1.25rem;
+    }
+
+    .nosotros-card-body {
+        font-size: 0.875rem;
+    }
+}
