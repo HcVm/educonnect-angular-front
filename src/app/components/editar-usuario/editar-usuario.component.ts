@@ -5,8 +5,6 @@ import { UsuarioService } from '../../services/usuario.service';
 import { Usuario } from '../../models/usuario';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
@@ -17,7 +15,7 @@ import Swal from 'sweetalert2';
   standalone: true,
   templateUrl: './editar-usuario.component.html',
   imports: [
-    MatFormFieldModule, MatInputModule, MatDatepickerModule, MatDatepickerModule, MatNativeDateModule, FormsModule, CommonModule, SweetAlert2Module
+    MatFormFieldModule, MatInputModule, FormsModule, CommonModule, SweetAlert2Module
   ],
   styleUrls: ['./editar-usuario.component.scss']
 })
