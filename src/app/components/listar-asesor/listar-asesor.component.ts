@@ -19,7 +19,7 @@ import { Router } from '@angular/router';
 })
 export class ListarAsesorComponent implements OnInit {
   asesores: Asesor[] = [];
-  displayedColumns: string[] = ['id', 'nombre', 'correo', 'especializacion', 'disponibilidad', 'tarifa', 'acciones'];
+  displayedColumns: string[] = ['id', 'nombre', 'correo', 'especializacion', 'disponibilidad', 'acciones'];
   usuarioAutenticado: Usuario | null = null;
 
   constructor(

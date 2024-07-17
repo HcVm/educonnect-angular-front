@@ -5,12 +5,12 @@ import { Usuario } from '../../models/usuario';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table'; // Importa MatTableModule
-
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatTableModule], // Agrega MatTableModule
+  imports: [CommonModule, MatCardModule, MatTableModule, RouterLink], // Agrega MatTableModule
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })

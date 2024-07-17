@@ -25,21 +25,23 @@ export const routes: Routes = [
   { path: 'registro', component: RegistroComponent },
   { path: 'registro-asesor', component: RegistroAsesorComponent },
   { path: 'registro-asesor-disponibilidad', component: RegistroAsesorDisponibilidadComponent },
-  { path: 'listar-usuarios', component: ListarUsuariosComponent },
-  { path: 'editar-usuario/:id', component: EditarUsuarioComponent },
-  { path: 'editar-asesor/:id', component: EditarAsesorComponent },
-  { path: 'listar-asesores', component: ListarAsesorComponent },
-  { path: 'listar-membresias', component: ListarMembresiasComponent },
-  { path: 'listar-pagos', component: ListarPagosComponent },
-
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'contactanos', component: ContactanosComponent },
-  { path: 'editar-usuario', component: EditarUsuarioComponent },
-  { path: 'listar-usuario', component: ListarUsuariosComponent },
   { path: 'membresias', component: MembresiasComponent },
   
   // Rutas protegidas (requieren autenticación)
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'listar-usuarios', component: ListarUsuariosComponent, canActivate: [AuthGuard] },
+  { path: 'listar-asesores', component: ListarAsesorComponent, canActivate: [AuthGuard] },
+  { path: 'listar-pagos', component: ListarPagosComponent, canActivate: [AuthGuard] },
+  { path: 'listar-membresias', component: ListarMembresiasComponent, canActivate: [AuthGuard] },
+
+
+  { path: 'editar-usuario', component: EditarUsuarioComponent, canActivate: [AuthGuard] },
+  { path: 'listar-usuario', component: ListarUsuariosComponent, canActivate: [AuthGuard] },
+  { path: 'editar-usuario/:id', component: EditarUsuarioComponent, canActivate: [AuthGuard] },
+  { path: 'editar-asesor/:id', component: EditarAsesorComponent, canActivate: [AuthGuard] },
+  
 
 
   // Ruta para página no encontrada (404)
