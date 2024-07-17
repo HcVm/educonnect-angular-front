@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs'; // Importa throwError
-import { catchError } from 'rxjs/operators'; // Importa catchError
+import { Observable, throwError } from 'rxjs'; 
+import { catchError } from 'rxjs/operators'; 
 import { Membresia } from '../models/membresia';
 import { environment } from '../enviroments/eviroment';
 
