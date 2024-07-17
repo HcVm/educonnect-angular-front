@@ -7,11 +7,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatIcon } from '@angular/material/icon';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @Component({
   selector: 'app-listar-usuarios',
   standalone: true,
-  imports: [MatCardModule, MatTableModule, CommonModule, MatIcon],
+  imports: [MatCardModule, MatTableModule, CommonModule, MatIcon, SweetAlert2Module],
   templateUrl: './listar-usuarios.component.html',
   styleUrl: './listar-usuarios.component.scss'
 })
@@ -53,6 +55,12 @@ export class ListarUsuariosComponent implements OnInit {
     this.usuarioService.eliminarUsuario(id).subscribe(
       () => {
         this.usuarios = this.usuarios.filter(usuario => usuario.id !== id);
+        Swal.fire({
+          title: '¡Éxito!',
+          text: 'Se ha eliminado el usuario exitosamente.',
+          icon: 'success',
+          confirmButtonText: 'Aceptar'
+        });
       },
       (error) => {
         console.error('Error al eliminar usuario:', error);

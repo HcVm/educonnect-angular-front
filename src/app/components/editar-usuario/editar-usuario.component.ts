@@ -9,13 +9,15 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar-usuario',
   standalone: true,
   templateUrl: './editar-usuario.component.html',
   imports: [
-    MatFormFieldModule, MatInputModule, MatDatepickerModule, MatDatepickerModule, MatNativeDateModule, FormsModule, CommonModule
+    MatFormFieldModule, MatInputModule, MatDatepickerModule, MatDatepickerModule, MatNativeDateModule, FormsModule, CommonModule, SweetAlert2Module
   ],
   styleUrls: ['./editar-usuario.component.scss']
 })
@@ -47,7 +49,12 @@ export class EditarUsuarioComponent implements OnInit {
     if (this.usuario) {
       this.usuarioService.actualizarUsuario(this.usuario).subscribe(
         () => {
-          this.router.navigate(['/']);
+          Swal.fire({
+            title: '¡Éxito!',
+            text: 'Se ha completado la edición exitosamente.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+          });
         },
         (error) => {
           console.error('Error al actualizar el usuario:', error);

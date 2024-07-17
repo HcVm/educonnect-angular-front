@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
         },
         error: (error) => {
           console.error('Error al iniciar sesión:', error);
-          this.errorMensaje = error.message; 
+          this.errorMensaje = 'Credenciales Invalidas'; 
         }
       });
     }

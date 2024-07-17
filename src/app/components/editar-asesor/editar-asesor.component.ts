@@ -10,13 +10,15 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import Swal from 'sweetalert2';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @Component({
   selector: 'app-editar-asesor',
   standalone: true,
   templateUrl: './editar-asesor.component.html',
   imports: [
-    MatFormFieldModule, MatInputModule, MatDatepickerModule, MatDatepickerModule, MatNativeDateModule, FormsModule, CommonModule
+    MatFormFieldModule, MatInputModule, MatDatepickerModule, MatDatepickerModule, MatNativeDateModule, FormsModule, CommonModule, SweetAlert2Module
   ],
   styleUrls: ['./editar-asesor.component.scss']
 })
@@ -49,7 +51,12 @@ export class EditarAsesorComponent implements OnInit {
     if (this.asesor) {
       this.asesorService.actualizarAsesor(this.asesor).subscribe(
         () => {
-          this.router.navigate(['/listar-asesores']);
+          Swal.fire({
+            title: '¡Éxito!',
+            text: 'Se ha completado la edición exitosamente.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+          });
         },
         (error) => {
           console.error('Error al actualizar el asesor:', error);

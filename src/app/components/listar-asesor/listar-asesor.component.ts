@@ -9,11 +9,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon'; 
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @Component({
   selector: 'app-listar-asesores',
   standalone: true,
-  imports: [MatCardModule, MatTableModule, CommonModule, MatIconModule],
+  imports: [MatCardModule, MatTableModule, CommonModule, MatIconModule, SweetAlert2Module],
   templateUrl: './listar-asesor.component.html',
   styleUrls: ['./listar-asesor.component.scss'] 
 })
@@ -56,6 +58,13 @@ export class ListarAsesorComponent implements OnInit {
     this.asesorService.eliminarAsesor(id).subscribe(
       () => {
         this.asesores = this.asesores.filter(asesor => asesor.id !== id);
+        Swal.fire({
+          title: '¡Éxito!',
+          text: 'Se ha eliminado el asesor exitosamente.',
+          icon: 'success',
+          confirmButtonText: 'Aceptar'
+        });
+
       },
       (error) => {
         console.error('Error al eliminar Asesor:', error);
