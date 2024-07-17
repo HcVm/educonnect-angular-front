@@ -4,13 +4,13 @@ import { UsuarioService } from '../../services/usuario.service';
 import { Usuario } from '../../models/usuario';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table'; // Importa MatTableModule
+import { MatTableModule } from '@angular/material/table';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatTableModule, RouterLink], // Agrega MatTableModule
+  imports: [CommonModule, MatCardModule, MatTableModule, RouterLink],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
@@ -39,7 +39,6 @@ export class DashboardComponent implements OnInit {
       },
       error: (error) => {
         console.error('Error al cargar usuarios:', error);
-        // Manejar el error de forma adecuada (mostrar un mensaje al usuario, etc.)
       }
     });
   }

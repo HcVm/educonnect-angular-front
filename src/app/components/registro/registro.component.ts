@@ -63,9 +63,9 @@ export class RegistroComponent implements OnInit {
 
   redirectTo(tipoUsuario: string) {
     if (tipoUsuario === 'estudiante') {
-      this.router.navigate(['/registro']); // Reemplaza con la ruta real
+      this.router.navigate(['/registro']); 
     } else if (tipoUsuario === 'asesor') {
-      this.router.navigate(['/registro-asesor']); // Reemplaza con la ruta real
+      this.router.navigate(['/registro-asesor']); 
     }
   }
 }

@@ -6,7 +6,7 @@ import { RegistroAsesorDisponibilidadComponent } from './components/registro-ase
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MembresiasComponent } from './components/membresias/membresias.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { AuthGuard } from './guards/auth.guard'; // Asegúrate de tener tu AuthGuard creado
+import { AuthGuard } from './guards/auth.guard';
 import { PrincipalPageComponent } from './components/principal-page/principal-page.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactanosComponent } from './components/contactanos/contactanos.component';
@@ -19,7 +19,7 @@ import { ListarPagosComponent } from './components/listar-pagos/listar-pagos.com
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: '', pathMatch: 'full' }, // Redirige a login por defecto
+  { path: '', redirectTo: '', pathMatch: 'full' }, 
   { path: '', component: PrincipalPageComponent },  
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
@@ -44,6 +44,5 @@ export const routes: Routes = [
   
 
 
-  // Ruta para página no encontrada (404)
   { path: '**', component: NotFoundComponent }
 ];

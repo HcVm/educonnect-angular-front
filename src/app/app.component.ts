@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { LayoutComponent } from './layout/layout.component'; // Importa el componente layout
+import { LayoutComponent } from './layout/layout.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [LayoutComponent], // Incluye el componente layout
+  imports: [LayoutComponent], 
   template: `<app-layout></app-layout>`,
   styles: []
 })

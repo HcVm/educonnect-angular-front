@@ -34,7 +34,6 @@ export class AuthService {
 
   cerrarSesion() {
     this.usuarioAutenticadoSubject.next(null);
-    // Opcional: Limpiar datos del usuario en localStorage
   }
 
   estaAutenticado(): boolean {

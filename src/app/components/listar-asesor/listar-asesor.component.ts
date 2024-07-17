@@ -7,15 +7,15 @@ import { Usuario } from '../../models/usuario';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
-import { MatIconModule } from '@angular/material/icon'; // Corregir MatIcon a MatIconModule
+import { MatIconModule } from '@angular/material/icon'; 
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listar-asesores',
   standalone: true,
-  imports: [MatCardModule, MatTableModule, CommonModule, MatIconModule], // Corregir MatIcon a MatIconModule
+  imports: [MatCardModule, MatTableModule, CommonModule, MatIconModule],
   templateUrl: './listar-asesor.component.html',
-  styleUrls: ['./listar-asesor.component.scss'] // Corregir styleUrl a styleUrls
+  styleUrls: ['./listar-asesor.component.scss'] 
 })
 export class ListarAsesorComponent implements OnInit {
   asesores: Asesor[] = [];

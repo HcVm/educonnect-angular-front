@@ -50,7 +50,7 @@ export class RegistroAsesorComponent implements OnInit {
         next: (response: any) => {
           console.log('Registro exitoso:', response,);
           localStorage.setItem('id', response.usuarioId)
-          this.router.navigate(['/registro-asesor-disponibilidad']); // Redirige al login después del registro
+          this.router.navigate(['/registro-asesor-disponibilidad']);
         },
         error: (error) => {
           console.error('Error al registrar:', error);
@@ -62,9 +62,9 @@ export class RegistroAsesorComponent implements OnInit {
   
   redirectTo(tipoUsuario: string) {
     if (tipoUsuario === 'estudiante') {
-      this.router.navigate(['/registro']); // Reemplaza con la ruta real
+      this.router.navigate(['/registro']);
     } else if (tipoUsuario === 'asesor') {
-      this.router.navigate(['/registro-asesor']); // Reemplaza con la ruta real
+      this.router.navigate(['/registro-asesor']); 
     }
   }
 }

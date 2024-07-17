@@ -48,7 +48,7 @@ export class RegistroAsesorDisponibilidadComponent implements OnInit {
       this.asesorService.crearAsesor(nuevoAsesor).subscribe({
         next: (response) => {
           console.log('Registro Asesor Exitoso:', response);
-          this.router.navigate(['/login']); // Redirige al login después del registro
+          this.router.navigate(['/login']); 
         },
         error: (error) => {
           console.error('Error al registrar:', error);

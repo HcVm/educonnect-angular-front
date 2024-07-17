@@ -3,12 +3,10 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #1a1a1a;
-    /* Color oscuro sólido para mayor contraste */
     color: white;
     padding: 1em;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    // position: fixed;
     top: 0;
     z-index: 1000;
 
@@ -38,13 +36,11 @@ header {
         padding: 0.5rem 1rem;
         transition: background-color 0.3s, color 0.3s;
         border-radius: 0.5rem;
-        /* Redondeado para enlaces */
     }
 
     nav ul li a:hover,
     nav ul li button:hover {
         background-color: #333333;
-        /* Color oscuro más claro para el hover */
     }
 
     nav ul li button {
@@ -53,14 +49,11 @@ header {
         border-radius: 0.75rem;
         cursor: pointer;
         transition: background-color 0.3s, border-color 0.3s;
-        /* Transiciones para botones */
     }
 
     nav ul li button:hover {
         color: white;
         background-color: #333333;
-        /* Color oscuro más claro para el hover */
         border-color: #ffd700;
-        /* Borde amarillo dorado */
     }
 }

@@ -46,11 +46,11 @@ export class LoginComponent implements OnInit {
       this.authService.iniciarSesion(usuario).subscribe({
         next: (response) => {
           console.log('Inicio de sesión exitoso:', response);
-          this.router.navigate(['/dashboard']); // Redirige al dashboard
+          this.router.navigate(['/dashboard']); 
         },
         error: (error) => {
           console.error('Error al iniciar sesión:', error);
-          this.errorMensaje = error.message; // Muestra el mensaje de error
+          this.errorMensaje = error.message; 
         }
       });
     }
